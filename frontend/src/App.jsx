@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState("Click the Button to get a Fun Fact!")
+  const [fact, setfact] = useState("Click the Button to get a Fun Fact!")
   const [loading, setLoading] = useState(false)
 
   const getFunFact = async () => {
@@ -22,7 +22,7 @@ function App() {
 return (
     <div className="App">
       <h1>Fun Facts Generator</h1>
-      <p>{count}</p>
+      <p>{fact}</p>
       <button onClick={getFunFact} disabled={loading}>
         {loading ? 'Loading...' : 'Get Fun Fact'}
       </button>
